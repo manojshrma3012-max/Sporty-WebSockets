@@ -18,6 +18,7 @@ model Match {
   awayTeam  String
   sport     String
   startTime DateTime
+  endTime   DateTime
   status    MatchStatus @default(SCHEDULED)
   homeScore Int         @default(0)
   awayScore Int         @default(0)
