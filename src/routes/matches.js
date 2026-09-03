@@ -55,6 +55,9 @@ matchRouter.post("/", async (req, res) => {
                 awayTeam,
             },
         });
+        if(req.app.locals.broadcast){
+            req.app.locals.broadcast(match);
+        }
 
         return res.status(201).json({
             message: "Match created successfully",
